@@ -27,7 +27,7 @@ function Home() {
           </a>
         </div>
       </div>
-      <div className="rounded-m order-2 self-stretch lg:flex-shrink-0 lg:basis-[40%] ">
+      <div className="rounded-m order-1 self-stretch lg:flex-shrink-0 lg:basis-[40%] ">
         <img
           className="h-full min-h-[244px] rounded-md object-cover"
           src="/images/bg4.jpg"

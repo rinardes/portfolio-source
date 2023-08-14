@@ -1,6 +1,39 @@
+import { ReactNode } from "react";
+
 const variants = {
-  base: "flex h-32  justify-center border border-borderOnbackground bg-onBackground hover:border-primary-400",
+  base: "flex h-32 flex-col items-center justify-center border border-borderOnbackground bg-onBackground  hover:border-primary-400",
 };
+
+interface CommonProps {
+  children: ReactNode;
+}
+
+function StackItemContainer({ children }: CommonProps) {
+  return <div className={variants.base}>{children}</div>;
+}
+
+function StackItemTitle({ children }: CommonProps) {
+  return (
+    <p className="font-bold tracking-wide text-primary-400 ">{children}</p>
+  );
+}
+
+const StackItemIcon: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = (
+  props
+) => {
+  return <img className="w-16" {...props} />;
+};
+
+const stackItems = [
+  "html5",
+  "css3",
+  "js",
+  "react",
+  "figma",
+  "tailwind",
+  "ts",
+  "chatGPT",
+];
 
 export default function Stack() {
   return (
@@ -15,31 +48,19 @@ export default function Stack() {
 
         <h1 className="mb-8 text-center text-5xl font-bold">Habilidades</h1>
         <div className="tech-grid mx-auto max-w-[584px]  scale-95 ">
-          <div className={variants.base}>
-            <img className="w-16" src="images/html5.svg" alt="" />
-          </div>
+          {stackItems.map((i) => {
+            let currentItem = i;
+            currentItem =
+              currentItem.charAt(0).toUpperCase() + currentItem.slice(1);
+            console.log(i);
 
-          <div className={variants.base}>
-            <img className="w-16" src="images/css3.svg" alt="" />
-          </div>
-          <div className={variants.base}>
-            <img className="w-16" src="images/js.svg" alt="" />
-          </div>
-          <div className={variants.base}>
-            <img className="w-16" src="images/react.svg" alt="" />
-          </div>
-          <div className={variants.base}>
-            <img className="w-16" src="images/figma.svg" alt="" />
-          </div>
-          <div className={variants.base}>
-            <img className="w-16" src="images/tailwind.svg" alt="" />
-          </div>
-          <div className={variants.base}>
-            <img className="w-16" src="images/ts.svg" alt="" />
-          </div>
-          <div className={variants.base}>
-            <img className="w-16" src="images/chatgpt.svg" alt="" />
-          </div>
+            return (
+              <StackItemContainer>
+                <StackItemIcon src={`images/${i}.svg`} />
+                <StackItemTitle>{currentItem}</StackItemTitle>
+              </StackItemContainer>
+            );
+          })}
         </div>
       </div>
     </section>
