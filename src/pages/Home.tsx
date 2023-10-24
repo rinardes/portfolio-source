@@ -6,7 +6,7 @@ function Home() {
       id="home"
       className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center gap-12 pt-32 md:flex-row md:gap-24 lg:pt-52"
     >
-      <div className="flex flex-col justify-between md:block">
+      <div className=" flex flex-col justify-between md:block">
         <div className="mb-12">
           <h1 className="mb-4  text-3xl font-bold lg:text-4xl">
             Seu site disponível em qualquer lugar
@@ -30,7 +30,7 @@ function Home() {
       <div className="rounded-m order-1 self-stretch lg:flex-shrink-0 lg:basis-[40%] ">
         <img
           className="h-full min-h-[244px] rounded-md object-cover"
-          src="/images/bg4.jpg"
+          src="/images/bg4.webp"
           alt=""
         />
       </div>
