@@ -20,7 +20,6 @@ function App() {
         <Stack />
         <Divider />
         <Contact />
-
         <Footer />
       </div>
     </div>
