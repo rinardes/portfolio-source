@@ -1,17 +1,23 @@
 import { useState } from "react";
 import MailMeField from "./MailMeField";
+import MailSendConfirmation from "./MailSendConfirmation";
 
 function MailMe() {
   const [isSubmited, setisSubmited] = useState(false);
+
+  const [toastTrigger, setToastTrigger] = useState(false);
+  const [status, setStatus] = useState(0);
 
   const sendMail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let form: HTMLFormElement = e.currentTarget;
     let data: FormData = new FormData(form);
-    fetch("https://formsubmit.co/e47984ed731ec19a00c851911add9359", {
+    fetch(`https://formsubmit.co/${import.meta.env.VITE_RESEND_CREDENTIAL}`, {
       method: "POST",
       body: data,
-    }).then(() => {
+    }).then((r) => {
+      setStatus(r.status);
+      setToastTrigger(true);
       setTimeout(() => {
         setisSubmited(false);
       }, 1000);
@@ -20,49 +26,57 @@ function MailMe() {
   };
 
   return (
-    <form
-      method="POST"
-      onSubmit={sendMail}
-      className="flex w-full flex-col gap-5"
-    >
-      <input type="hidden" name="_captcha" value="false"></input>
-      <div className="flex w-full flex-col gap-x-5  gap-y-5 sm:flex-row   [&>*]:basis-1/2">
+    <div>
+      {toastTrigger && (
+        <MailSendConfirmation
+          triggeFunction={setToastTrigger}
+          status={status}
+        />
+      )}
+      <form
+        method="POST"
+        onSubmit={sendMail}
+        className="flex w-full flex-col gap-5"
+      >
+        <input type="hidden" name="_captcha" value="false"></input>
+        <div className="flex w-full flex-col gap-x-5  gap-y-5 sm:flex-row   [&>*]:basis-1/2">
+          <MailMeField
+            isSubmited={isSubmited}
+            isRequired
+            name={"name"}
+            label={"Nome"}
+          />
+          <MailMeField
+            isSubmited={isSubmited}
+            name={"phone"}
+            label={"Telefone"}
+          />
+        </div>
         <MailMeField
           isSubmited={isSubmited}
           isRequired
-          name={"name"}
-          label={"Nome"}
+          name={"email"}
+          label={"Email"}
         />
         <MailMeField
           isSubmited={isSubmited}
-          name={"phone"}
-          label={"Telefone"}
+          isRequired
+          name={"subject"}
+          label={"Assunto"}
         />
-      </div>
-      <MailMeField
-        isSubmited={isSubmited}
-        isRequired
-        name={"email"}
-        label={"Email"}
-      />
-      <MailMeField
-        isSubmited={isSubmited}
-        isRequired
-        name={"subject"}
-        label={"Assunto"}
-      />
 
-      <MailMeField
-        isSubmited={isSubmited}
-        isRequired
-        name={"message"}
-        label={"Mensagem"}
-        isMessage
-      />
-      <button className="transiton-[transform] rounded-sm bg-primary-400 px-9 py-4 font-primary text-sm text-primary-800 duration-300 hover:-translate-y-1">
-        Enviar
-      </button>
-    </form>
+        <MailMeField
+          isSubmited={isSubmited}
+          isRequired
+          name={"message"}
+          label={"Mensagem"}
+          isMessage
+        />
+        <button className="transiton-[transform] rounded-sm bg-primary-400 px-9 py-4 font-primary text-sm text-primary-800 duration-300 hover:-translate-y-1">
+          Enviar
+        </button>
+      </form>
+    </div>
   );
 }
 
