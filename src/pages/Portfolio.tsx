@@ -10,10 +10,22 @@ export default function Portfolio() {
       <h1 className="mb-10 font-primary text-5xl font-bold text-white">
         Projects
       </h1>
-      <div className="relative mx-auto aspect-video w-full max-w-xl border border-border bg-onBackground">
-        <h2 className="absolute bottom-6 right-6">
-          Coming Soon<span className="blink-animated">...</span>
-        </h2>
+      <div className="flex w-full flex-col items-center border border-borderOnbackground bg-onBackground py-4">
+        <div className="col-span-3 grid grid-cols-1 ">
+          <div className="flex flex-col items-center ">
+            <img className=" border-[6px]" src="projects/my-lists.jpg" />
+            <button className="mt-4 w-full rounded-md border border-border py-2 hover:bg-primary-400">
+              <a href="https://rinardes-lists.netlify.app/" target="_blank">
+                Ver Projeto
+              </a>
+            </button>
+            <button className="mt-4 w-full rounded-md border border-border py-2 hover:bg-primary-400">
+              <a href="https://github.com/rinardes/my-lists" target="_blank">
+                Source Code
+              </a>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
