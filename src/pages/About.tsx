@@ -2,14 +2,25 @@ export default function About() {
   return (
     <section
       id="about"
-      className="mx-auto mt-28 flex max-w-7xl justify-between py-56"
+      className="mx-auto mt-28 flex max-w-7xl flex-col gap-4 py-56 text-center md:px-20  lg:flex-row lg:px-0 lg:text-left"
     >
-      <div className="lg:basis-1/2"></div>
-      <div className="flex  flex-col lg:basis-2/5">
-        <h3 className="mb-4 text-xl font-medium text-primary-400">Quem sou</h3>
+      <div className=" lg:block lg:basis-1/2">
+        <h3 className="mb-4 text-center text-xl font-medium text-primary-400 lg:hidden">
+          Quem sou eu
+        </h3>
+        <img
+          className="h-full min-h-[240px] object-cover"
+          src="images/3217136.jpg"
+          alt=""
+        />
+      </div>
+      <div className="flex flex-col lg:basis-2/5 ">
+        <h3 className="mb-4 hidden  text-xl font-medium text-primary-400 lg:block">
+          Quem sou
+        </h3>
         <h1 className="mb-2 text-5xl font-bold">Richard Melo</h1>
         <h4 className="mb-4 text-lg leading-4">Frontend Developer</h4>
-        <p className="mb-4  font-light  text-paragraph">
+        <p className="mb-4   font-light  text-paragraph">
           Meu nome é Richard, sempre fui uma pessoa analítica e curiosa, que
           gosta de observar e aprender sobre como as coisas de fato funcionam,
           nunca aceitando nenhum dogma ou regra, mas sempre buscando ver tudo
