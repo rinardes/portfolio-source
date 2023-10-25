@@ -1,3 +1,6 @@
+import PortfolioButton from "../components/PortfolioButton";
+import PortfolioItem from "../components/PortfolioItem";
+
 export default function Portfolio() {
   return (
     <section
@@ -12,19 +15,15 @@ export default function Portfolio() {
       </h1>
       <div className="flex w-full flex-col items-center border border-borderOnbackground bg-onBackground py-4">
         <div className="col-span-3 grid grid-cols-1 ">
-          <div className="flex flex-col items-center ">
-            <img className=" border-[6px]" src="projects/my-lists.jpg" />
-            <button className="mt-4 w-full rounded-md border border-border py-2 hover:bg-primary-400">
-              <a href="https://rinardes-lists.netlify.app/" target="_blank">
-                Ver Projeto
-              </a>
-            </button>
-            <button className="mt-4 w-full rounded-md border border-border py-2 hover:bg-primary-400">
-              <a href="https://github.com/rinardes/my-lists" target="_blank">
-                Source Code
-              </a>
-            </button>
-          </div>
+          <PortfolioItem
+            projectURL="https://rinardes-lists.netlify.app/"
+            sourceURL="https://github.com/rinardes/my-lists"
+            imageURL="projects/my-lists.jpg"
+          />
+          <PortfolioItem
+            sourceURL="https://github.com/rinardes/portfolio-source"
+            imageURL=""
+          />
         </div>
       </div>
     </section>
