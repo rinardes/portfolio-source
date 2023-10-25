@@ -1,16 +1,27 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-function SocialMedia() {
+function SocialMedia({ isVertical }: { isVertical?: boolean }) {
   return (
     <div>
-      <h2 className="mb-6 font-bold tracking-wider"></h2>
-      <div className="flex gap-4">
+      <div
+        className={`flex justify-center ${isVertical && "md:flex-col"} gap-4`}
+      >
         <a
-          href=""
-          className="bg-[#202327] px-6 py-4 text-lg transition-all hover:-translate-y-2 "
+          href="https://www.linkedin.com/in/richardnardes/"
+          target="_blank"
+          className="border border-borderOnbackground bg-onBackground  
+          px-4 py-2 text-3xl text-primary-400 transition-all hover:-translate-y-2 "
         >
           <FontAwesomeIcon icon={faLinkedinIn} />
+        </a>
+        <a
+          href="https://github.com/rinardes"
+          target="_blank"
+          className="border border-borderOnbackground bg-onBackground 
+          px-4 py-2 text-3xl text-primary-400 transition-all hover:-translate-y-2"
+        >
+          <FontAwesomeIcon icon={faGithub} />
         </a>
       </div>
     </div>
