@@ -3,7 +3,7 @@ import MailMe from "../components/MailMe";
 function Contact() {
   return (
     <section
-      id="contact"
+      id="contato"
       className="mx-auto flex max-w-7xl flex-col items-center gap-24 lg:flex-row"
     >
       <div className="flex w-full basis-2/5 flex-col gap-4">

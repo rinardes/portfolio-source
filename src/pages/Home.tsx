@@ -1,13 +1,10 @@
-
-
 import SocialMedia from "../components/SocialMedia";
 import scrollToElement from "../utils/scrollToElement";
 
 function Home() {
-
   return (
     <section
-      id="home"
+      id="inicio"
       className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center gap-12 pt-32 md:flex-row md:gap-24 lg:pt-52"
     >
       <div className=" flex flex-col justify-between text-center md:block md:text-left">
@@ -31,13 +28,15 @@ function Home() {
           </a>
         </div>
       </div>
-      <div  className={`rounded-m order-1 md:flex self-stretch lg:flex-shrink-0 lg:basis-[40%] `}>
-        <img 
-          className="h-full min-h-[244px] rounded-md mb-4 md:mb-0 md:w-4/5 flex-grow object-cover"
+      <div
+        className={`rounded-m order-1 self-stretch md:flex lg:flex-shrink-0 lg:basis-[40%] `}
+      >
+        <img
+          className="mb-4 h-full min-h-[244px] flex-grow rounded-md object-cover md:mb-0 md:w-4/5"
           src="/images/bg4.webp"
           alt="Mulher com óculos de realidade virtual"
         />
-        <SocialMedia isVertical/>
+        <SocialMedia isVertical />
       </div>
     </section>
   );

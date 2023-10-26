@@ -3,14 +3,14 @@ import PortfolioItem from "../components/PortfolioItem";
 export default function Portfolio() {
   return (
     <section
-      id="projects"
+      id="projetos"
       className="mx-auto flex  max-w-7xl flex-col items-center"
     >
       <h2 className="text-center font-primary text-xl font-medium  text-primary-400">
         Portfolio
       </h2>
       <h1 className="mb-10 font-primary text-5xl font-bold text-white">
-        Projects
+        Projetos
       </h1>
       <div className="flex w-full flex-col items-center border border-borderOnbackground bg-onBackground py-4">
         <div className=" grid grid-cols-1 gap-16 md:grid-cols-2 ">

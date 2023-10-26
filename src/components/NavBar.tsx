@@ -20,9 +20,9 @@ function NavBar({ isSide = false, onClick }: NavBar) {
           if (onClick) onClick();
         }}
         className={linkBase}
-        href="#home"
+        href="#inicio"
       >
-        HOME
+        INÍCIO
       </a>
       <a
         onClick={(e) => {
@@ -30,9 +30,9 @@ function NavBar({ isSide = false, onClick }: NavBar) {
           if (onClick) onClick();
         }}
         className={linkBase}
-        href="#about"
+        href="#sobre"
       >
-        ABOUT
+        SOBRE
       </a>
       <a
         onClick={(e) => {
@@ -40,16 +40,16 @@ function NavBar({ isSide = false, onClick }: NavBar) {
           if (onClick) onClick();
         }}
         className={linkBase}
-        href="#projects"
+        href="#projetos"
       >
-        PROJECTS
+        PROJETOS
       </a>
       <a
         onClick={(e) => {
           scrollToElement(e);
           if (onClick) onClick();
         }}
-        href="#contact"
+        href="#contato"
         className="rounded-lg bg-primary-400 px-9 py-4 font-primary text-primary-800 transition-transform hover:-translate-y-2 "
       >
         Fale Comigo
