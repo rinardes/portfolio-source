@@ -89,7 +89,7 @@ export default function Stack() {
       {currentModalIndex > -1 && (
         <div
           onClick={closeModal}
-          className="fixed left-0 top-0 z-10 flex h-full-h w-full items-center justify-center backdrop-blur-sm  "
+          className="fixed left-0 top-0 z-10 flex h-[100vh] w-full items-center justify-center backdrop-blur-sm  "
         >
           <div className="relative mx-10 max-w-[450px] border border-primary-700 bg-black px-4 py-4 ">
             {stackItems[currentModalIndex].description}
