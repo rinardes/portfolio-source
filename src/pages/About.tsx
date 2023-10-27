@@ -9,7 +9,7 @@ export default function About() {
           Quem sou eu
         </h3>
         <img
-          className="h-full min-h-[240px] object-cover"
+          className="h-full min-h-[288px] object-cover "
           src="images/3217136.jpg"
           alt=""
         />
@@ -18,9 +18,9 @@ export default function About() {
         <h3 className="mb-4 hidden  text-xl font-medium text-primary-400 lg:block">
           Quem sou
         </h3>
-        <h1 className="mb-2 text-5xl font-bold">Richard Melo</h1>
+        <h1 className="mb-2 text-4xl font-bold md:text-5xl">Richard Melo</h1>
         <h4 className="mb-4 text-lg leading-4">Frontend Developer</h4>
-        <p className="mb-4   font-light  text-paragraph">
+        <p className="mb-4  font-light text-paragraph">
           Meu nome é Richard, sempre fui uma pessoa analítica e curiosa, que
           gosta de observar e aprender sobre como as coisas de fato funcionam,
           nunca aceitando nenhum dogma ou regra, mas sempre buscando ver tudo
@@ -28,7 +28,7 @@ export default function About() {
           fosse parte de um novo mundo, construindo o rosto de uma nova
           realidade.
         </p>
-        <p className="font-light   text-paragraph">
+        <p className=" font-light   text-paragraph">
           No desenvolvimento web te entrego as últimas tecnologias do mercado
           como react, tailwind e integrações com inteligências artificias
           generativas. E além disso entrego para o seu negócio copywriting, seo

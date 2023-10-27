@@ -108,7 +108,9 @@ export default function Stack() {
           Stack
         </h3>
 
-        <h1 className="mb-0 text-center text-5xl font-bold">Habilidades</h1>
+        <h1 className="mb-0 text-center text-4xl font-bold md:text-5xl">
+          Habilidades
+        </h1>
         <p className="mb-4 text-center">(click nos ícones)</p>
         <div className="tech-grid mx-auto max-w-[584px]  scale-95 ">
           {stackItems.map((i, index) => {

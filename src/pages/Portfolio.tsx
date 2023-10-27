@@ -9,7 +9,7 @@ export default function Portfolio() {
       <h2 className="text-center font-primary text-xl font-medium  text-primary-400">
         Portfolio
       </h2>
-      <h1 className="mb-10 font-primary text-5xl font-bold text-white">
+      <h1 className="mb-10 font-primary text-4xl font-bold text-white md:text-5xl">
         Projetos
       </h1>
       <div className="flex w-full flex-col items-center border border-borderOnbackground bg-onBackground py-4">
