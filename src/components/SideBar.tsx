@@ -8,13 +8,13 @@ interface SideBar {
 
 function SideBar({ onClick, isActive }: SideBar) {
   const [currentOpacity, setcurrentOpacity] = useState(0);
-  const [currentSide, setcurrentSide] = useState("-left-full");
+  const [currentSide, setcurrentSide] = useState("-translate-x-full");
 
   const toggleShowElement = () => {
     currentOpacity == 0 ? setcurrentOpacity(100) : setcurrentOpacity(0);
-    currentSide == "-left-full"
-      ? setcurrentSide("left-0")
-      : setcurrentSide("-left-full");
+    currentSide == "-translate-x-full"
+      ? setcurrentSide("translate-x-0")
+      : setcurrentSide("-translate-x-full");
   };
 
   const clickOut = (e: React.MouseEvent) => {
@@ -42,7 +42,7 @@ function SideBar({ onClick, isActive }: SideBar) {
         className="absolute left-0 top-0 h-[100vh] w-[100vw] bg-[#000]/90 "
       ></div>
       <section
-        className={`absolute h-[100vh] w-[310px] bg-[#191B1E] p-4 ${currentSide} z-50 transition-all duration-500 min-[480px]:w-[380px] min-[480px]:p-12 opacity-${currentOpacity} } `}
+        className={`absolute z-50 h-[100vh] w-[310px]  bg-[#191B1E] p-4 ${currentSide} transition-all duration-500 min-[480px]:w-[380px] min-[480px]:p-12 opacity-${currentOpacity} } `}
       >
         <div className=" mb-24 flex items-center justify-between">
           <h2 className=" font-['Bruno_Ace_SC'] text-xl uppercase">
