@@ -48,16 +48,11 @@ function MailMe() {
           />
           <MailMeField
             isSubmited={isSubmited}
-            name={"phone"}
-            label={"Telefone"}
+            isRequired
+            name={"email"}
+            label={"Email"}
           />
         </div>
-        <MailMeField
-          isSubmited={isSubmited}
-          isRequired
-          name={"email"}
-          label={"Email"}
-        />
         <MailMeField
           isSubmited={isSubmited}
           isRequired
