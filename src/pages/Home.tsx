@@ -5,7 +5,7 @@ function Home() {
   return (
     <section
       id="inicio"
-      className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center gap-12 pt-32 md:flex-row md:gap-24 lg:pt-52"
+      className="relative mx-auto flex w-full max-w-7xl flex-col items-center gap-12 pt-32 md:min-h-screen md:flex-row md:gap-24 lg:pt-52"
     >
       <div className=" flex flex-col justify-between text-center md:block md:text-left">
         <div className="mb-12">
@@ -32,7 +32,7 @@ function Home() {
         className={`rounded-m order-1 self-stretch md:flex lg:flex-shrink-0 lg:basis-[40%] `}
       >
         <img
-          className="mb-4 h-full min-h-[244px] flex-grow rounded-md object-cover md:mb-0 md:w-4/5"
+          className="mb-4 hidden h-full min-h-[244px] flex-grow rounded-md object-cover min-[480px]:block md:mb-0 md:w-4/5"
           src="/images/bg4.webp"
           alt="Mulher com óculos de realidade virtual"
         />
