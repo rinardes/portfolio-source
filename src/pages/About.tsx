@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className="mx-auto mt-28 flex max-w-7xl flex-col gap-4 py-56 text-center md:px-20  lg:flex-row lg:px-0 lg:text-left"
+      className="mx-auto mt-28 flex max-w-7xl flex-col gap-4 py-20 text-center md:px-20  lg:flex-row lg:px-0 lg:text-left"
     >
       <div className=" lg:block lg:basis-1/2">
         <h3 className="mb-4 text-center text-xl font-medium text-primary-400 lg:hidden">
