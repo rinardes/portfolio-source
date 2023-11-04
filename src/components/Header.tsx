@@ -14,7 +14,7 @@ function Header() {
     <header
       className={`fixed w-full bg-[#212428]/${
         sideVisible ? "100" : "85"
-      } left-0 top-0 z-10 flex h-16 items-center justify-between px-4 text-[#c4cfde] shadow-lg backdrop-blur-md sm:h-24 md:px-16`}
+      } left-0 top-0 z-10 flex h-16 items-center justify-between px-4 text-[#c4cfde] shadow-lg backdrop-blur-sm sm:h-24 md:px-16`}
     >
       {sideVisible && (
         <SideBar onClick={toogleSideVisibility} isActive={sideVisible} />
